@@ -4,6 +4,12 @@ package justf
  * defines a filter over an F. Given a function A => Boolean
  * returns a function which will accept an F[A] and
  * return a filtered F[A].
+ *
+ * Not an embedding.
+ * Source Category:
+ * objects: A (monoidal)
+ * arrows: functions A => Boolean
+ *
  * @tparam F the container type to filter over.
  */
 trait Filter[F[_]]{
