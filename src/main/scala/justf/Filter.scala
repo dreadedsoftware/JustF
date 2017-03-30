@@ -15,4 +15,7 @@ trait Filter[F[_]]{
    * a filter operation for F with type A.
    */
   def filter[A](f: A => Boolean): F[A] => F[A]
+  
+  final def filterNot[A](f: A => Boolean): F[A] => F[A] =
+    filter(a => !f(a))
 }
